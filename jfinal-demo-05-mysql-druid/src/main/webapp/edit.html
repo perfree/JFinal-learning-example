@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>编辑用户</title>
+</head>
+<style>
+	input{height:25px;margin-top: 10px;}
+	input[type='submit'] {width: 100px;height: 30px;margin-left: 50px;}
+</style>
+<body>
+	<form action="updateUser" method="post">
+		<input type="hidden" name="user.id" value="#(user.id)" />
+		姓名：<input type="text" name="user.name" autofocus="autofocus" value="#(user.name)" /><br>
+		年龄：<input type="text" name="user.age" value="#(user.age)" /><br>
+		<input type="submit" value="提交"/>
+	</form>
+</body>
+</html>

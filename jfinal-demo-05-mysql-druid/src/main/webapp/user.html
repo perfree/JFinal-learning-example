@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>mysql</title>
+</head>
+<style>
+    .userTable {  min-height: 25px; line-height: 40px; text-align: center; border-color:#b6ff00; border-collapse: collapse;margin-top: 10px;}   
+    .useradd {margin-top: 20px;text-decoration: none;}
+</style>
+<body>
+	<a href="toAdd" class="useradd">添加用户</a>
+	<table border="1" class="userTable">
+		<tr>
+			<th width="100px">id</th>
+			<th width="150px">姓名</th>
+			<th width="150px">年龄</th>
+			<th width="150px">操作</th>
+		</tr>
+		#for(user:users)
+		<tr>
+			<td>#(user.id)</td>
+			<td>#(user.name)</td>
+			<td>#(user.age)</td>
+			<td>
+				<a href="/toEdit?id=#(user.id)">编辑</a>&nbsp;&nbsp;
+				<a href="/del?id=#(user.id)">删除</a>
+			</td>
+		</tr>
+		#end
+	</table>
+</body>
+</html>
